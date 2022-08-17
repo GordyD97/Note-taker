@@ -58,9 +58,15 @@ if (title && text) {
     console.log(response);
     termData.push(newNote);
 }
-}
+    fs.writeFile("./db/db.json", JSON.stringify(termData), function (err) {
+        if (err) {
+            return console.log(err);
+        }
+        console.log("note  saved");
+    });
 
-}
 
-})
+    res.json(newNote);
+
+});
 
