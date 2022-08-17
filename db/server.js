@@ -69,4 +69,35 @@ if (title && text) {
     res.json(newNote);
 
 });
+app.delete("/api/notes/:id", (req, res) => {
+    console.log('params', req.params.id)
+    console.log(`${req.method} request received`)
+
+    for (let i = 0; i < termData.length; i++) {
+
+        if (termData[i].id == req.params.id) {
+            // Splice takes i position, and then deletes the 1 note.
+            termData.splice(i, 1);
+            break;
+        }
+    }
+    /*
+      get id from param
+      filter out the id you got from param to get an array that does not include
+    */
+    fs.writeFile("./db/db.json", JSON.stringify(termData), function (err) {
+        if (err) {
+            return console.log(err);
+        }
+        console.log("Your note is deleted!");
+        res.json({ noteId: req.params.id })
+    });
+
+
+})
+
+app.listen(PORT, () =>
+    console.log(`Example app listening at http://localhost:${PORT}`)
+);
+
 
