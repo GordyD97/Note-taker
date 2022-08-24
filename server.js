@@ -1,7 +1,7 @@
 const express = require('express');
 const path =require('path');
 const fs = require('fs');
-const util = require('util');
+
 
 // setting up the server
 const PORT = process.env.PORT || 3001;
@@ -23,19 +23,19 @@ app.use(express.static('public'));
 
 // get routes
 app.get("/", (req, res) => {
-    res.sendFile(path.join(__dirname, "public/index.html"))
+    res.sendFile(path.join(__dirname, "./public/index.html"))
 });
 
 app.get("/notes", (req, res) => {
-    res.sendFile(path.join(__dirname, "public/notes.html"))
+    res.sendFile(path.join(__dirname, "./public/notes.html"))
 });
 
 app.get('*', (req, res) => {
-    res.sendFile(path.join(_dirname, './public/index.html'));
+    res.sendFile(path.join(__dirname, './public/index.html'));
 });
 
-// creating notes function
 
+// creating notes function
 function createNewNote(body, notesArray) {
     const newNote = body;
     if (!Array.isArray(notesArray))
