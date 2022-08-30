@@ -1,12 +1,19 @@
 # Note-taker
 
+#  Deployed stie
+* [deployed stie](https://note-taker-express-gd.herokuapp.com/)
 
 # Installation
-* express
-* heroku
+```
+node server.js
+```
 
 ## Screenshot
 ![first screenshot](./public/assets/images/note%20taker.PNG)
+
+## Technologies used
+* express
+* heroku
 
 ## User Story
 
