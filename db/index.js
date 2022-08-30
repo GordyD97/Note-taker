@@ -6,11 +6,11 @@ const writeToJson = util.promisify(fs.writeFile);
 
 class Notes {
   read() {
-    return readJson("db/db.json", "utf8");
+    return readJson("./db/db.json", "utf8");
   }
 
   write(notes) {
-    return writeToJson("db/db.json", JSON.stringify(notes));
+    return writeToJson("./db/db.json", JSON.stringify(notes));
   }
 
   readAllNotes() {

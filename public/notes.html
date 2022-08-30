@@ -15,11 +15,10 @@
       integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="./assets/css/styles.css" />
+    <link rel="stylesheet" href="/assets/css/styles.css" />
   </head>
 
   <body>
-    <!-- style the buttons and input field properly, center and give the elemnts pizzaz.  -->
     <nav class="navbar navbar-dark bg-dark">
       <a class="navbar-brand" href="/">Note Taker </a>
       <div class="icons">
@@ -27,39 +26,24 @@
         <i class="fas fa-plus text-light new-note"></i>
       </div>
     </nav>
-
-    <!-- container housing both input fields just a big card  -->
     <div class="container-fluid">
-      <!-- list container should probably be on the side -->
-      <!-- removed from first container will move to the side. -->
-
       <div class="row">
         <div class="col-4 list-container">
           <div class="card">
             <ul class="list-group"></ul>
           </div>
         </div>
-
-        <!-- both fields in this card -->
-        <!-- align-items-center justify-content-center -->
-        <!-- row shadow-lg p-5 mb-5 bg-body mx-auto rounded -->
-        <!-- align-items-center -->
-        <!-- mx-auto -->
-
         <div class="col-8">
-          <!-- note-title col-xs-3 shadow-lg p-2 align-bottom -->
           <input
             class="note-title"
             placeholder="Note Title"
             maxlength="28"
             type="text"
           />
-
           <textarea class="note-textarea" placeholder="Note Text"></textarea>
         </div>
       </div>
     </div>
-
-    <script src="./assets/js/index.js"></script>
+    <script src="/assets/js/index.js"></script>
   </body>
 </html>

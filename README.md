@@ -2,8 +2,11 @@
 
 
 # Installation
+* express
+* heroku
 
 ## Screenshot
+![first screenshot](./public/assets/images/note%20taker.PNG)
 
 ## User Story
 
